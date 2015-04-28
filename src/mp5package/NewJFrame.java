@@ -14,6 +14,12 @@ import java.awt.Color;
  */
 public class NewJFrame extends javax.swing.JFrame {
 
+    boolean XOR = false;
+    boolean XORbutton1 = false;
+    boolean XORbutton2 = false;
+    boolean AND = false;
+    boolean ANDbutton1;
+    boolean ANDbutton2;
     /**
      * Creates new form NewJFrame
      */
@@ -39,7 +45,6 @@ public class NewJFrame extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
@@ -53,6 +58,12 @@ public class NewJFrame extends javax.swing.JFrame {
         XORButton1 = new javax.swing.JButton();
         XORButton2 = new javax.swing.JButton();
         XOROutputLabel = new javax.swing.JLabel();
+        jPanel8 = new javax.swing.JPanel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        ANDButton1 = new javax.swing.JButton();
+        ANDButton2 = new javax.swing.JButton();
+        ANDOutputLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setForeground(new java.awt.Color(0, 0, 255));
@@ -67,14 +78,14 @@ public class NewJFrame extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 919, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1068, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 399, Short.MAX_VALUE))
+                .addGap(0, 508, Short.MAX_VALUE))
         );
 
         jTabbedPane4.addTab("tab1", jPanel1);
@@ -89,14 +100,14 @@ public class NewJFrame extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(725, Short.MAX_VALUE))
+                .addContainerGap(869, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(412, Short.MAX_VALUE))
+                .addContainerGap(526, Short.MAX_VALUE))
         );
 
         jTabbedPane4.addTab("tab2", jPanel2);
@@ -111,19 +122,17 @@ public class NewJFrame extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(725, Short.MAX_VALUE))
+                .addContainerGap(869, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(412, Short.MAX_VALUE))
+                .addContainerGap(526, Short.MAX_VALUE))
         );
 
         jTabbedPane4.addTab("tab3", jPanel3);
-
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/AND gate.png"))); // NOI18N
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         jLabel6.setText("XOR Gate");
@@ -139,9 +148,7 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                         .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 537, Short.MAX_VALUE)
-                        .addComponent(jLabel4)
-                        .addGap(188, 188, 188))
+                        .addGap(188, 869, Short.MAX_VALUE))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
@@ -149,14 +156,9 @@ public class NewJFrame extends javax.swing.JFrame {
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addComponent(jLabel4))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 119, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 238, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addContainerGap())
         );
@@ -177,14 +179,14 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8))
-                .addContainerGap(701, Short.MAX_VALUE))
+                .addContainerGap(845, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 119, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 238, Short.MAX_VALUE)
                 .addComponent(jLabel8)
                 .addContainerGap())
         );
@@ -201,14 +203,14 @@ public class NewJFrame extends javax.swing.JFrame {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, 919, Short.MAX_VALUE)
+                .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, 1068, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 399, Short.MAX_VALUE))
+                .addGap(0, 508, Short.MAX_VALUE))
         );
 
         jTabbedPane4.addTab("tab6", jPanel6);
@@ -218,6 +220,7 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         jLabel11.setText("XOR GATE");
 
+        XORButton1.setForeground(new java.awt.Color(255, 0, 51));
         XORButton1.setText("Input A");
         XORButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -225,6 +228,7 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
 
+        XORButton2.setForeground(new java.awt.Color(255, 0, 51));
         XORButton2.setText("Input B");
         XORButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -233,6 +237,7 @@ public class NewJFrame extends javax.swing.JFrame {
         });
 
         XOROutputLabel.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        XOROutputLabel.setForeground(new java.awt.Color(255, 0, 0));
         XOROutputLabel.setText("Output");
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
@@ -253,7 +258,7 @@ public class NewJFrame extends javax.swing.JFrame {
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addGap(377, 377, 377)
                         .addComponent(jLabel11)))
-                .addContainerGap(48, Short.MAX_VALUE))
+                .addContainerGap(210, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -262,23 +267,87 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addComponent(jLabel11)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addGap(65, 65, 65)
-                                .addComponent(jLabel10))
-                            .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addGap(132, 132, 132)
-                                .addComponent(XORButton1)
-                                .addGap(91, 91, 91)
-                                .addComponent(XORButton2)))
-                        .addContainerGap(94, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(XOROutputLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(205, 205, 205))))
+                        .addGap(65, 65, 65)
+                        .addComponent(jLabel10))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(132, 132, 132)
+                        .addComponent(XORButton1)
+                        .addGap(91, 91, 91)
+                        .addComponent(XORButton2))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(175, 175, 175)
+                        .addComponent(XOROutputLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(208, Short.MAX_VALUE))
         );
 
         jTabbedPane4.addTab("tab7", jPanel7);
+
+        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel12.setText("AND GATE");
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picturepackage/AND activity.png"))); // NOI18N
+
+        ANDButton1.setForeground(new java.awt.Color(255, 0, 0));
+        ANDButton1.setText("Input A");
+        ANDButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ANDButton1ActionPerformed(evt);
+            }
+        });
+
+        ANDButton2.setForeground(new java.awt.Color(255, 0, 0));
+        ANDButton2.setText("Input B");
+        ANDButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ANDButton2ActionPerformed(evt);
+            }
+        });
+
+        ANDOutputLabel.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        ANDOutputLabel.setForeground(new java.awt.Color(255, 0, 0));
+        ANDOutputLabel.setText("Output");
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(142, 142, 142)
+                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(ANDButton2)
+                            .addComponent(ANDButton1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(ANDOutputLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(375, 375, 375)
+                        .addComponent(jLabel12)))
+                .addContainerGap(202, Short.MAX_VALUE))
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(185, 185, 185)
+                        .addComponent(ANDButton1)
+                        .addGap(130, 130, 130)
+                        .addComponent(ANDButton2))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel12)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel4))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(246, 246, 246)
+                        .addComponent(ANDOutputLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(177, Short.MAX_VALUE))
+        );
+
+        jTabbedPane4.addTab("tab8", jPanel8);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -288,19 +357,95 @@ public class NewJFrame extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane4)
+            .addComponent(jTabbedPane4, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void XORButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_XORButton1ActionPerformed
-        // TODO add your handling code here:
+        boolean firstGo = true;
+        if (XORbutton1 == false){
+            XORbutton1 = true;
+            XORButton1.setForeground(Color.GREEN);
+            if (XORbutton1 == true && XORbutton2 != true){
+                XOROutputLabel.setForeground(Color.GREEN);
+            }
+            if (XORbutton1 == true && XORbutton2 == true)
+                XOROutputLabel.setForeground(Color.RED);
+                    
+            firstGo = false;
+        }
+        if (XORbutton1 == true && firstGo == true){
+            XORbutton1 = false;
+            XORButton1.setForeground(Color.RED);
+            if (XORbutton1 == false && XORbutton2 == false)
+                XOROutputLabel.setForeground(Color.RED);
+            if (XORbutton1 == false && XORbutton2 == true)
+                XOROutputLabel.setForeground(Color.GREEN);
+        }
+        
     }//GEN-LAST:event_XORButton1ActionPerformed
 
     private void XORButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_XORButton2ActionPerformed
-        // TODO add your handling code here:
+        boolean firstGo = true;
+        if (XORbutton2 == false){
+            XORbutton2 = true;
+            XORButton2.setForeground(Color.GREEN);
+            if (XORbutton2 == true && XORbutton1 != true){
+                XOROutputLabel.setForeground(Color.GREEN);
+            }
+            if (XORbutton1 == true && XORbutton2 == true)
+                XOROutputLabel.setForeground(Color.RED);
+            firstGo = false;
+        }
+        if (XORbutton2 == true && firstGo == true){
+            XORbutton2 = false;
+            XORButton2.setForeground(Color.RED);
+            if (XORbutton2 == false && XORbutton1 == false)
+                XOROutputLabel.setForeground(Color.RED);
+            if (XORbutton2 == false && XORbutton1 == true)
+                XOROutputLabel.setForeground(Color.GREEN);
+        }
     }//GEN-LAST:event_XORButton2ActionPerformed
+
+    private void ANDButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ANDButton1ActionPerformed
+        boolean firstGo = true;
+        if (ANDbutton1 == false){
+            ANDbutton1 = true;
+            ANDButton1.setForeground(Color.GREEN);
+            if (ANDbutton1 == true && ANDbutton2 == true){
+                ANDOutputLabel.setForeground(Color.GREEN);
+            }
+            
+                    
+            firstGo = false;
+        }
+        if (ANDbutton1 == true && firstGo == true){
+            ANDbutton1 = false;
+            ANDButton1.setForeground(Color.RED);
+            ANDOutputLabel.setForeground(Color.RED);
+        }
+    }//GEN-LAST:event_ANDButton1ActionPerformed
+
+    private void ANDButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ANDButton2ActionPerformed
+        boolean firstGo = true;
+        if (ANDbutton2 == false){
+            ANDbutton2 = true;
+            ANDButton2.setForeground(Color.GREEN);
+            if (ANDbutton2 == true && ANDbutton1 == true){
+                ANDOutputLabel.setForeground(Color.GREEN);
+            }
+            
+                    
+            firstGo = false;
+        }
+        if (ANDbutton2 == true && firstGo == true){
+            ANDbutton2 = false;
+            ANDButton2.setForeground(Color.RED);
+            ANDOutputLabel.setForeground(Color.RED);
+        }
+    }//GEN-LAST:event_ANDButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -339,12 +484,16 @@ public class NewJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ANDButton1;
+    private javax.swing.JButton ANDButton2;
+    private javax.swing.JLabel ANDOutputLabel;
     private javax.swing.JButton XORButton1;
     private javax.swing.JButton XORButton2;
     private javax.swing.JLabel XOROutputLabel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -360,6 +509,7 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
     private javax.swing.JTabbedPane jTabbedPane4;
     // End of variables declaration//GEN-END:variables
 }
