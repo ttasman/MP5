@@ -66,6 +66,7 @@ public class NewJFrame extends javax.swing.JFrame {
         jTabbedPane4 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
@@ -92,6 +93,8 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel20 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jTextArea5 = new javax.swing.JTextArea();
         jPanel7 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
@@ -141,6 +144,8 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Digital Logic");
 
+        jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picturepackage/Intro.gif"))); // NOI18N
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -149,12 +154,18 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1068, Short.MAX_VALUE)
                 .addContainerGap())
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(352, 352, 352)
+                .addComponent(jLabel23)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 761, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel23)
+                .addGap(0, 375, Short.MAX_VALUE))
         );
 
         jTabbedPane4.addTab("Intro", jPanel1);
@@ -360,6 +371,13 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("Activities");
 
+        jTextArea5.setBackground(new java.awt.Color(204, 204, 204));
+        jTextArea5.setColumns(20);
+        jTextArea5.setFont(new java.awt.Font("Monospaced", 0, 18)); // NOI18N
+        jTextArea5.setRows(5);
+        jTextArea5.setText("The following slides will have activites that will \nallow you to test out a XOR and a AND gate to see\nhow the inputs affect the output.");
+        jScrollPane5.setViewportView(jTextArea5);
+
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
@@ -368,12 +386,18 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, 1068, Short.MAX_VALUE)
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 619, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(232, 232, 232))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 761, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 516, Short.MAX_VALUE))
         );
 
         jTabbedPane4.addTab("Activity Intro", jPanel6);
@@ -809,117 +833,89 @@ public class NewJFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void XORButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_XORButton1ActionPerformed
-        boolean firstGo = true;
-        if (XORbutton1 == false){
-            XORbutton1 = true;
-            XORButton1.setForeground(Color.GREEN);
-            if (XORbutton1 == true && XORbutton2 != true){
-                XOROutputLabel.setForeground(Color.GREEN);
-            }
-            if (XORbutton1 == true && XORbutton2 == true)
-                XOROutputLabel.setForeground(Color.RED);
-                    
-            firstGo = false;
-        }
-        if (XORbutton1 == true && firstGo == true){
-            XORbutton1 = false;
-            XORButton1.setForeground(Color.RED);
-            if (XORbutton1 == false && XORbutton2 == false)
-                XOROutputLabel.setForeground(Color.RED);
-            if (XORbutton1 == false && XORbutton2 == true)
-                XOROutputLabel.setForeground(Color.GREEN);
-        }
-        
-    }//GEN-LAST:event_XORButton1ActionPerformed
+    private void jRadioButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton16ActionPerformed
+        Q4A1 = false;
+        Q4A2 = false;
+        Q4A3 = false;
+        Q4A4 = true;
+    }//GEN-LAST:event_jRadioButton16ActionPerformed
 
-    private void XORButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_XORButton2ActionPerformed
-        boolean firstGo = true;
-        if (XORbutton2 == false){
-            XORbutton2 = true;
-            XORButton2.setForeground(Color.GREEN);
-            if (XORbutton2 == true && XORbutton1 != true){
-                XOROutputLabel.setForeground(Color.GREEN);
-            }
-            if (XORbutton1 == true && XORbutton2 == true)
-                XOROutputLabel.setForeground(Color.RED);
-            firstGo = false;
-        }
-        if (XORbutton2 == true && firstGo == true){
-            XORbutton2 = false;
-            XORButton2.setForeground(Color.RED);
-            if (XORbutton2 == false && XORbutton1 == false)
-                XOROutputLabel.setForeground(Color.RED);
-            if (XORbutton2 == false && XORbutton1 == true)
-                XOROutputLabel.setForeground(Color.GREEN);
-        }
-    }//GEN-LAST:event_XORButton2ActionPerformed
+    private void jRadioButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton15ActionPerformed
+        Q4A1 = false;
+        Q4A2 = false;
+        Q4A3 = true;
+        Q4A4 = false;
+    }//GEN-LAST:event_jRadioButton15ActionPerformed
 
-    private void ANDButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ANDButton1ActionPerformed
-        boolean firstGo = true;
-        if (ANDbutton1 == false){
-            ANDbutton1 = true;
-            ANDButton1.setForeground(Color.GREEN);
-            if (ANDbutton1 == true && ANDbutton2 == true){
-                ANDOutputLabel.setForeground(Color.GREEN);
-            }
-            
-                    
-            firstGo = false;
-        }
-        if (ANDbutton1 == true && firstGo == true){
-            ANDbutton1 = false;
-            ANDButton1.setForeground(Color.RED);
-            ANDOutputLabel.setForeground(Color.RED);
-        }
-    }//GEN-LAST:event_ANDButton1ActionPerformed
+    private void jRadioButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton14ActionPerformed
+        Q4A1 = false;
+        Q4A2 = true;
+        Q4A3 = false;
+        Q4A4 = false;
+    }//GEN-LAST:event_jRadioButton14ActionPerformed
 
-    private void ANDButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ANDButton2ActionPerformed
-        boolean firstGo = true;
-        if (ANDbutton2 == false){
-            ANDbutton2 = true;
-            ANDButton2.setForeground(Color.GREEN);
-            if (ANDbutton2 == true && ANDbutton1 == true){
-                ANDOutputLabel.setForeground(Color.GREEN);
-            }
-            
-                    
-            firstGo = false;
-        }
-        if (ANDbutton2 == true && firstGo == true){
-            ANDbutton2 = false;
-            ANDButton2.setForeground(Color.RED);
-            ANDOutputLabel.setForeground(Color.RED);
-        }
-    }//GEN-LAST:event_ANDButton2ActionPerformed
+    private void jRadioButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton13ActionPerformed
+        Q4A1 = true;
+        Q4A2 = false;
+        Q4A3 = false;
+        Q4A4 = false;
+    }//GEN-LAST:event_jRadioButton13ActionPerformed
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
-        Q1A1 = true;
-        Q1A2 = false;
-        Q1A3 = false;
-        Q1A4 = false;
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+    private void jRadioButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton12ActionPerformed
+        Q3A1 = false;
+        Q3A2 = false;
+        Q3A3 = false;
+        Q3A4 = true;
+    }//GEN-LAST:event_jRadioButton12ActionPerformed
 
-    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
-        Q1A1 = false;
-        Q1A2 = true;
-        Q1A3 = false;
-        Q1A4 = false;
-    }//GEN-LAST:event_jRadioButton2ActionPerformed
+    private void jRadioButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton11ActionPerformed
+        Q3A1 = false;
+        Q3A2 = false;
+        Q3A3 = true;
+        Q3A4 = false;
+    }//GEN-LAST:event_jRadioButton11ActionPerformed
 
-    private void jRadioButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton5ActionPerformed
-        Q1A1 = false;
-        Q1A2 = false;
-        Q1A3 = true;
-        Q1A4 = false;
-    }//GEN-LAST:event_jRadioButton5ActionPerformed
+    private void jRadioButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton10ActionPerformed
+        Q3A1 = false;
+        Q3A2 = true;
+        Q3A3 = false;
+        Q3A4 = false;
+    }//GEN-LAST:event_jRadioButton10ActionPerformed
 
-    private void jRadioButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton6ActionPerformed
-        Q1A1 = false;
-        Q1A2 = false;
-        Q1A3 = false;
-        Q1A4 = true;
-    }//GEN-LAST:event_jRadioButton6ActionPerformed
+    private void jRadioButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton9ActionPerformed
+        Q3A1 = true;
+        Q3A2 = false;
+        Q3A3 = false;
+        Q3A4 = false;
+    }//GEN-LAST:event_jRadioButton9ActionPerformed
+
+    private void jRadioButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton8ActionPerformed
+        Q2A1 = false;
+        Q2A2 = false;
+        Q2A3 = false;
+        Q2A4 = true;
+    }//GEN-LAST:event_jRadioButton8ActionPerformed
+
+    private void jRadioButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton7ActionPerformed
+        Q2A1 = false;
+        Q2A2 = false;
+        Q2A3 = true;
+        Q2A4 = false;
+    }//GEN-LAST:event_jRadioButton7ActionPerformed
+
+    private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
+        Q2A1 = false;
+        Q2A2 = true;
+        Q2A3 = false;
+        Q2A4 = false;
+    }//GEN-LAST:event_jRadioButton4ActionPerformed
+
+    private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
+        Q2A1 = true;
+        Q2A2 = false;
+        Q2A3 = false;
+        Q2A4 = false;
+    }//GEN-LAST:event_jRadioButton3ActionPerformed
 
     private void SubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubmitButtonActionPerformed
         if (Q1A2 == true && Q1Correct == false){
@@ -937,163 +933,188 @@ public class NewJFrame extends javax.swing.JFrame {
             Q1Label.setForeground(Color.RED);
             if (Q1Correct == true && Q1A2 == true){
                 Q1Label.setText("Correct");
-                Q1Label.setForeground(Color.GREEN);    
+                Q1Label.setForeground(Color.GREEN);
             }
         }
         //--------------------------------//
-       if (Q2A3 == true && Q2Correct == false){
-           correct++;
-           Q2Correct = true;
-           Q2Label.setText("Correct");
-           Q2Label.setForeground(Color.GREEN);
-           jRadioButton3.setEnabled(false);
-           jRadioButton4.setEnabled(false);
-           jRadioButton7.setEnabled(false);
-           jRadioButton8.setEnabled(false);
-           
-       }
-       else{
+        if (Q2A3 == true && Q2Correct == false){
+            correct++;
+            Q2Correct = true;
+            Q2Label.setText("Correct");
+            Q2Label.setForeground(Color.GREEN);
+            jRadioButton3.setEnabled(false);
+            jRadioButton4.setEnabled(false);
+            jRadioButton7.setEnabled(false);
+            jRadioButton8.setEnabled(false);
+
+        }
+        else{
             Q2Label.setText("Incorrect");
             Q2Label.setForeground(Color.RED);
             if (Q2Correct == true && Q2A3 == true){
                 Q2Label.setText("Correct");
-                Q2Label.setForeground(Color.GREEN);  
-            } 
+                Q2Label.setForeground(Color.GREEN);
+            }
         }
-       //----------------------------//
-       if (Q3A1 == true && Q3Correct == false){
-           correct++;
-           Q3Correct = true;
-           Q3Label.setText("Correct");
-           Q3Label.setForeground(Color.GREEN);
-           jRadioButton9.setEnabled(false);
-           jRadioButton10.setEnabled(false);
-           jRadioButton11.setEnabled(false);
-           jRadioButton12.setEnabled(false);
-           
-       }
-       else{
+        //----------------------------//
+        if (Q3A1 == true && Q3Correct == false){
+            correct++;
+            Q3Correct = true;
+            Q3Label.setText("Correct");
+            Q3Label.setForeground(Color.GREEN);
+            jRadioButton9.setEnabled(false);
+            jRadioButton10.setEnabled(false);
+            jRadioButton11.setEnabled(false);
+            jRadioButton12.setEnabled(false);
+
+        }
+        else{
             Q3Label.setText("Incorrect");
             Q3Label.setForeground(Color.RED);
             if (Q3Correct == true && Q3A1 == true){
                 Q3Label.setText("Correct");
-                Q3Label.setForeground(Color.GREEN);  
-            } 
+                Q3Label.setForeground(Color.GREEN);
+            }
         }
-       //----------------------------------//
-       if (Q4A4 == true && Q4Correct == false){
-           correct++;
-           Q4Correct = true;
-           Q4Label.setText("Correct");
-           Q4Label.setForeground(Color.GREEN);
-           jRadioButton13.setEnabled(false);
-           jRadioButton14.setEnabled(false);
-           jRadioButton15.setEnabled(false);
-           jRadioButton16.setEnabled(false);
-           
-       }
-       else{
+        //----------------------------------//
+        if (Q4A4 == true && Q4Correct == false){
+            correct++;
+            Q4Correct = true;
+            Q4Label.setText("Correct");
+            Q4Label.setForeground(Color.GREEN);
+            jRadioButton13.setEnabled(false);
+            jRadioButton14.setEnabled(false);
+            jRadioButton15.setEnabled(false);
+            jRadioButton16.setEnabled(false);
+
+        }
+        else{
             Q4Label.setText("Incorrect");
             Q4Label.setForeground(Color.RED);
             if (Q4Correct == true && Q4A4 == true){
                 Q4Label.setText("Correct");
-                Q4Label.setForeground(Color.GREEN);  
-            } 
+                Q4Label.setForeground(Color.GREEN);
+            }
         }
-       
-       
+
         String correctStr;
         correctStr = Integer.toString(correct);
         correctCounter.setText(correctStr);
-        
+
         if (correct == 4){
             JOptionPane.showMessageDialog(this, "Congratulations!! You got all the questions right!");
         }
     }//GEN-LAST:event_SubmitButtonActionPerformed
 
-    private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
-        Q2A1 = true;
-        Q2A2 = false;
-        Q2A3 = false;
-        Q2A4 = false;
-    }//GEN-LAST:event_jRadioButton3ActionPerformed
+    private void jRadioButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton6ActionPerformed
+        Q1A1 = false;
+        Q1A2 = false;
+        Q1A3 = false;
+        Q1A4 = true;
+    }//GEN-LAST:event_jRadioButton6ActionPerformed
 
-    private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
-        Q2A1 = false;
-        Q2A2 = true;
-        Q2A3 = false;
-        Q2A4 = false;
-    }//GEN-LAST:event_jRadioButton4ActionPerformed
+    private void jRadioButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton5ActionPerformed
+        Q1A1 = false;
+        Q1A2 = false;
+        Q1A3 = true;
+        Q1A4 = false;
+    }//GEN-LAST:event_jRadioButton5ActionPerformed
 
-    private void jRadioButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton7ActionPerformed
-        Q2A1 = false;
-        Q2A2 = false;
-        Q2A3 = true;
-        Q2A4 = false;
-    }//GEN-LAST:event_jRadioButton7ActionPerformed
+    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+        Q1A1 = false;
+        Q1A2 = true;
+        Q1A3 = false;
+        Q1A4 = false;
+    }//GEN-LAST:event_jRadioButton2ActionPerformed
 
-    private void jRadioButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton8ActionPerformed
-        Q2A1 = false;
-        Q2A2 = false;
-        Q2A3 = false;
-        Q2A4 = true;
-    }//GEN-LAST:event_jRadioButton8ActionPerformed
+    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+        Q1A1 = true;
+        Q1A2 = false;
+        Q1A3 = false;
+        Q1A4 = false;
+    }//GEN-LAST:event_jRadioButton1ActionPerformed
 
-    private void jRadioButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton9ActionPerformed
-        Q3A1 = true;
-        Q3A2 = false;
-        Q3A3 = false;
-        Q3A4 = false;
-    }//GEN-LAST:event_jRadioButton9ActionPerformed
+    private void ANDButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ANDButton2ActionPerformed
+        boolean firstGo = true;
+        if (ANDbutton2 == false){
+            ANDbutton2 = true;
+            ANDButton2.setForeground(Color.GREEN);
+            if (ANDbutton2 == true && ANDbutton1 == true){
+                ANDOutputLabel.setForeground(Color.GREEN);
+            }
 
-    private void jRadioButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton10ActionPerformed
-        Q3A1 = false;
-        Q3A2 = true;
-        Q3A3 = false;
-        Q3A4 = false;
-    }//GEN-LAST:event_jRadioButton10ActionPerformed
+            firstGo = false;
+        }
+        if (ANDbutton2 == true && firstGo == true){
+            ANDbutton2 = false;
+            ANDButton2.setForeground(Color.RED);
+            ANDOutputLabel.setForeground(Color.RED);
+        }
+    }//GEN-LAST:event_ANDButton2ActionPerformed
 
-    private void jRadioButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton11ActionPerformed
-        Q3A1 = false;
-        Q3A2 = false;
-        Q3A3 = true;
-        Q3A4 = false;
-    }//GEN-LAST:event_jRadioButton11ActionPerformed
+    private void ANDButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ANDButton1ActionPerformed
+        boolean firstGo = true;
+        if (ANDbutton1 == false){
+            ANDbutton1 = true;
+            ANDButton1.setForeground(Color.GREEN);
+            if (ANDbutton1 == true && ANDbutton2 == true){
+                ANDOutputLabel.setForeground(Color.GREEN);
+            }
 
-    private void jRadioButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton12ActionPerformed
-        Q3A1 = false;
-        Q3A2 = false;
-        Q3A3 = false;
-        Q3A4 = true;
-    }//GEN-LAST:event_jRadioButton12ActionPerformed
+            firstGo = false;
+        }
+        if (ANDbutton1 == true && firstGo == true){
+            ANDbutton1 = false;
+            ANDButton1.setForeground(Color.RED);
+            ANDOutputLabel.setForeground(Color.RED);
+        }
+    }//GEN-LAST:event_ANDButton1ActionPerformed
 
-    private void jRadioButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton13ActionPerformed
-        Q4A1 = true;
-        Q4A2 = false;
-        Q4A3 = false;
-        Q4A4 = false;
-    }//GEN-LAST:event_jRadioButton13ActionPerformed
+    private void XORButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_XORButton2ActionPerformed
+        boolean firstGo = true;
+        if (XORbutton2 == false){
+            XORbutton2 = true;
+            XORButton2.setForeground(Color.GREEN);
+            if (XORbutton2 == true && XORbutton1 != true){
+                XOROutputLabel.setForeground(Color.GREEN);
+            }
+            if (XORbutton1 == true && XORbutton2 == true)
+            XOROutputLabel.setForeground(Color.RED);
+            firstGo = false;
+        }
+        if (XORbutton2 == true && firstGo == true){
+            XORbutton2 = false;
+            XORButton2.setForeground(Color.RED);
+            if (XORbutton2 == false && XORbutton1 == false)
+            XOROutputLabel.setForeground(Color.RED);
+            if (XORbutton2 == false && XORbutton1 == true)
+            XOROutputLabel.setForeground(Color.GREEN);
+        }
+    }//GEN-LAST:event_XORButton2ActionPerformed
 
-    private void jRadioButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton14ActionPerformed
-        Q4A1 = false;
-        Q4A2 = true;
-        Q4A3 = false;
-        Q4A4 = false;
-    }//GEN-LAST:event_jRadioButton14ActionPerformed
+    private void XORButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_XORButton1ActionPerformed
+        boolean firstGo = true;
+        if (XORbutton1 == false){
+            XORbutton1 = true;
+            XORButton1.setForeground(Color.GREEN);
+            if (XORbutton1 == true && XORbutton2 != true){
+                XOROutputLabel.setForeground(Color.GREEN);
+            }
+            if (XORbutton1 == true && XORbutton2 == true)
+            XOROutputLabel.setForeground(Color.RED);
 
-    private void jRadioButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton15ActionPerformed
-        Q4A1 = false;
-        Q4A2 = false;
-        Q4A3 = true;
-        Q4A4 = false;
-    }//GEN-LAST:event_jRadioButton15ActionPerformed
+            firstGo = false;
+        }
+        if (XORbutton1 == true && firstGo == true){
+            XORbutton1 = false;
+            XORButton1.setForeground(Color.RED);
+            if (XORbutton1 == false && XORbutton2 == false)
+            XOROutputLabel.setForeground(Color.RED);
+            if (XORbutton1 == false && XORbutton2 == true)
+            XOROutputLabel.setForeground(Color.GREEN);
+        }
 
-    private void jRadioButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton16ActionPerformed
-        Q4A1 = false;
-        Q4A2 = false;
-        Q4A3 = false;
-        Q4A4 = true;
-    }//GEN-LAST:event_jRadioButton16ActionPerformed
+    }//GEN-LAST:event_XORButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1165,6 +1186,7 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -1201,10 +1223,12 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JTabbedPane jTabbedPane4;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextArea jTextArea3;
     private javax.swing.JTextArea jTextArea4;
+    private javax.swing.JTextArea jTextArea5;
     // End of variables declaration//GEN-END:variables
 }
